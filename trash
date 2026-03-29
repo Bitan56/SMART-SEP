@@ -1,0 +1,152 @@
+Car Animation HTML code svg removed-
+<svg class="w-64 h-48 animate-bounce" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="80" y="100" width="240" height="60" rx="10" fill="#22c55e" opacity="0.8"/>
+                            <rect x="120" y="60" width="160" height="50" rx="8" fill="#22c55e"/>
+                            <rect x="140" y="70" width="40" height="30" rx="4" fill="#0f172a" opacity="0.6"/>
+                            <rect x="220" y="70" width="40" height="30" rx="4" fill="#0f172a" opacity="0.6"/>
+                            <circle cx="130" cy="160" r="20" fill="#1e293b"/>
+                            <circle cx="130" cy="160" r="12" fill="#22c55e"/>
+                            <circle cx="270" cy="160" r="20" fill="#1e293b"/>
+                            <circle cx="270" cy="160" r="12" fill="#22c55e"/>
+                            <circle cx="85" cy="115" r="6" fill="#fbbf24"/>
+                            <circle cx="85" cy="135" r="6" fill="#fbbf24"/>
+                        </svg>
+
+
+                        https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=800 - Detection removed image
+
+                        https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800 - AI Classification removed image
+
+                        https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800 - Smart Segregation Image
+
+                        https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800 - Cloud Sync removed Image
+
+
+                         <!-- AI Classification -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1772984961046-72994ce2ee86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWklMjBjbGFzc2lmaWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D
+                            alt=" AI Classification"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#3b82f6]">
+                            <i data-lucide="camera" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">AI Image
+                            Classification</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            ESP32-CAM powered image recognition for accurate waste sorting.</p>
+                    </div>
+                </div>
+
+                <!-- IoT Monitoring -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                            alt="IoT Monitoring"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#22c55e]">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">IoT Monitoring
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Real-time sensor data for fill levels, temperature, and humidity.</p>
+                    </div>
+                </div>
+
+                <!-- Moisture Detection -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1655360831994-e7310124de52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGlnaXRhbCUyMG1vaXN0dXJlJTIwbW9uaXRvcmluZ3xlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Safety Detection"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#ef4444]">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">Moisture
+                            Detection</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Real-time moisture level monitoring for optimal waste management.</p>
+                    </div>
+                </div>
+
+                <!-- Robotic Arm -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9ib3RpYyUyMGFybXxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Robotic Arm"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#a855f7]">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">Robotic Arm</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Automated segregation of waste into designated bins.</p>
+                    </div>
+                </div>
+
+                <!-- GPS Tracking -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=800"
+                            alt="GPS Tracking"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#f59e0b]">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">GPS Tracking
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Live location monitoring of the waste collection vehicle.</p>
+                    </div>
+                </div>
+
+                <!-- GPS Tracking -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWklMjBhdXRvbWF0aW9ufGVufDB8fDB8fHww"
+                            alt="GPS Tracking"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#69f542]">
+                            <i data-lucide="brain" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">AI Automation
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Full AI automation for waste management.</p>
+                    </div>
+
+
+
+                     <i data-lucide="zap" class="w-6 h-6 text-white"></i> - Dashboard Logo removed
+ 

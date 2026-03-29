@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Dashboard | WAYMAKERS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#0f172a] text-white font-['Inter'] overflow-x-hidden">
+    <!-- Background Decorative Elements -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#22c55e]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#3b82f6]/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-[#0f172a] flex items-center justify-center transition-opacity duration-500">
+        <div class="flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-[#22c55e] border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p class="text-[#22c55e] font-medium animate-pulse">Initializing Neural Link...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-[#22c55e] rounded-xl flex items-center justify-center shadow-lg shadow-[#22c55e]/20">
+                   <!--Navbar Logo-->
+                   <img src="../image-assets/project-logo.jpeg" alt="SMART-SEP Logo" class="w-full h-full">
+                </div>
+                <span class="text-xl font-black tracking-tighter">SMART-SEP</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html" class="text-sm font-bold text-white hover:text-[#22c55e] transition-colors">HOME</a>
+                <a href="how-it-works.html" class="text-sm font-bold text-gray-400 hover:text-white transition-colors">HOW IT WORKS</a>
+                <a href="dashboard.html" class="text-sm font-bold text-white hover:text-[#22c55e] transition-colors">DASHBOARD</a>
+            </div>
+            <div id="logo-placeholder-nav" class="flex items-center gap-4">
+                <!-- Add your logo here -->
+                 
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto pt-32 pb-12 px-4 sm:px-6 lg:px-8 relative z-10">
+        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-4xl font-black tracking-tight mb-2">LIVE DASHBOARD</h1>
+                <p class="text-gray-400 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-[#22c55e] rounded-full animate-ping"></span>
+                    Real-time System Status • Last updated: <span id="last-updated">--:--:--</span>
+                </p>
+            </div>
+            <div class="bg-[#1e293b] border border-white/10 px-6 py-3 rounded-2xl flex items-center gap-4">
+                <div class="text-right">
+                    <p class="text-xs text-gray-500 uppercase font-bold">System Health</p>
+                    <p id="system-health-text" class="text-[#22c55e] font-bold">OPTIMAL</p>
+                </div>
+                <div id="system-health-icon-container" class="w-10 h-10 bg-[#22c55e]/10 rounded-xl flex items-center justify-center text-[#22c55e]">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sensor Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            <!-- Bio-Waste -->
+            <div class="sensor-card group" data-color="#22c55e">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 rounded-2xl bg-[#22c55e]/10 text-[#22c55e] group-hover:scale-110 transition-transform">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 uppercase">Bio-Waste</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span id="val-bio" class="text-4xl font-black tracking-tight">0</span>
+                    <span class="text-gray-500 font-bold">%</span>
+                </div>
+                <div class="mt-4 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div id="bar-bio" class="h-full bg-[#22c55e] transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Non-Bio -->
+            <div class="sensor-card group" data-color="#3b82f6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 rounded-2xl bg-[#3b82f6]/10 text-[#3b82f6] group-hover:scale-110 transition-transform">
+                        <i data-lucide="recycle" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 uppercase">Non-Bio</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span id="val-nonbio" class="text-4xl font-black tracking-tight">0</span>
+                    <span class="text-gray-500 font-bold">%</span>
+                </div>
+                <div class="mt-4 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div id="bar-nonbio" class="h-full bg-[#3b82f6] transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Temperature -->
+            <div class="sensor-card group" data-color="#f59e0b">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 rounded-2xl bg-[#f59e0b]/10 text-[#f59e0b] group-hover:scale-110 transition-transform">
+                        <i data-lucide="thermometer" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 uppercase">Temp</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span id="val-temp" class="text-4xl font-black tracking-tight">0</span>
+                    <span class="text-gray-500 font-bold">°C</span>
+                </div>
+                <div class="mt-4 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div id="bar-temp" class="h-full bg-[#f59e0b] transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Humidity -->
+            <div class="sensor-card group" data-color="#06b6d4">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 rounded-2xl bg-[#06b6d4]/10 text-[#06b6d4] group-hover:scale-110 transition-transform">
+                        <i data-lucide="droplets" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 uppercase">Humidity</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span id="val-humid" class="text-4xl font-black tracking-tight">0</span>
+                    <span class="text-gray-500 font-bold">%</span>
+                </div>
+                <div class="mt-4 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div id="bar-humid" class="h-full bg-[#06b6d4] transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Methane -->
+            <div class="sensor-card group" data-color="#ef4444">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 rounded-2xl bg-[#ef4444]/10 text-[#ef4444] group-hover:scale-110 transition-transform">
+                        <i data-lucide="wind" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gray-500 uppercase">Methane</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span id="val-methane" class="text-4xl font-black tracking-tight">0</span>
+                    <span class="text-gray-500 font-bold">PPM</span>
+                </div>
+                <div class="mt-4 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div id="bar-methane" class="h-full bg-[#ef4444] transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="mb-12">
+            <div class="bg-[#1e293b]/50 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden h-[500px] relative group">
+                <div id="map" class="w-full h-full z-0"></div>
+                <div class="absolute top-6 left-6 z-10 pointer-events-none">
+                    <div class="bg-[#0f172a]/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl flex items-center gap-3">
+                        <div class="w-2 h-2 bg-[#22c55e] rounded-full animate-pulse"></div>
+                        <span class="text-xs font-bold tracking-wider uppercase">Live GPS Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Section -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#1e293b]/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-lg font-bold">Waste Collection Trends</h3>
+                    <div class="flex gap-2">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#22c55e]"></div>
+                            <span class="text-[10px] text-gray-400 font-bold uppercase">Bio</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#3b82f6]"></div>
+                            <span class="text-[10px] text-gray-400 font-bold uppercase">Non-Bio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[300px]">
+                    <canvas id="wasteChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-[#1e293b]/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-lg font-bold">Methane & Temp Analysis</h3>
+                    <span class="text-[10px] text-gray-400 font-bold uppercase">Last 1 Hour</span>
+                </div>
+                <div class="h-[300px]">
+                    <canvas id="methaneChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5 text-center">
+        <p class="text-gray-500 text-sm font-medium">© 2026 WAYMAKERS Smart Waste Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

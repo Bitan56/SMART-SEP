@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAYMAKERS | Smart Waste Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#0f172a] text-white font-['Inter'] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div id="logo-placeholder-home"
+                        class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center overflow-hidden">
+                        <!-- Add your logo here -->
+                        <img src="image-assets/project-logo.jpeg" alt="SMART-SEP Logo" class="w-full h-full">
+                    </div>
+                    <span class="text-xl font-bold text-[#22c55e]">SMART-SEP</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about"
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="pages/how-it-works.html"
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                        <span>How it Works</span>
+                    </a>
+                    <a href="pages/dashboard.html"
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#team"
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <span>Team</span>
+                    </a>
+                </div>
+
+                <a href="pages/dashboard.html"
+                    class="bg-[#22c55e] hover:bg-[#16a34a] text-white px-6 py-2.5 rounded-xl font-bold transition-all duration-300 shadow-lg shadow-[#22c55e]/20">
+                    Live Monitor
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative w-full min-h-[600px] lg:min-h-[800px] flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=2000"
+                alt="Smart City Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-transparent to-[#0f172a]"></div>
+        </div>
+
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#22c55e]/10 blur-[120px] rounded-full z-0">
+        </div>
+
+        <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="animate-fadeIn ml-[20px]">
+
+                <h1 class="text-6xl lg:text-8xl font-black tracking-tighter text-white mb-6 ml-[3px]">
+                    SMART-SEP
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-lg leading-relaxed text-center">
+                    AI & IoT Powered Smart Waste Segregation and Monitoring System. Revolutionizing urban waste
+                    management with real-time intelligence.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="pages/dashboard.html"
+                        class="group relative px-8 py-4 bg-[#22c55e] text-white rounded-xl font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-[#22c55e]/20 overflow-hidden inline-block">
+                        <span class="relative z-10 flex items-center gap-2">
+                            View Live Dashboard
+                            <span>→</span>
+                        </span>
+                    </a>
+                    <button onclick="document.getElementById('technology').scrollIntoView({ behavior: 'smooth' })"
+                        class="px-8 py-4 border border-white/10 text-white rounded-xl font-bold text-lg hover:bg-white/5 hover:border-white/20 active:scale-[0.98] transition-all duration-300 backdrop-blur-sm">
+                        Explore Technology
+                    </button>
+                </div>
+            </div>
+
+            <div class="h-[400px] lg:h-[600px] w-full relative">
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-[#1e293b]/20 rounded-3xl border border-white/5 backdrop-blur-sm overflow-hidden">
+                    <div id="car-animation" class="w-full h-full flex flex-col items-center justify-center relative">
+                        <!-- Car Animation -->
+                        <div class="vehicle-img overflow-hidden h-[400px] w-[400px] rounded-[10%]">
+                            <img src="image-assets/smart-sep-img.jpeg" alt="Smart Sep Vehicle Image"
+                                class="animate-zoom h-full w-full object-cover rounded-[10%]">
+                        </div>
+                        <p class="text-[#22c55e] font-bold mt-4">Smart Waste Vehicle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-[#1e293b]/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">About the System</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    WAYMAKERS integrates advanced AI and IoT technologies to create a sustainable and efficient waste
+                    management ecosystem.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- AI Image Classification -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://media.istockphoto.com/id/2143498093/photo/cctv-ai-facial-recognition-camera-authentificating-people-on-street-security-camera.webp?a=1&b=1&s=612x612&w=0&k=20&c=u4BDBM7M2mJBWYX9nI24Z6Dlh_mMpSeam6gMO7C-zV4="
+                            alt="AI image Classification"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#3b82f6]">
+                            <i data-lucide="camera" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#3b82f6] transition-colors">AI Image
+                            Classification</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            ESP32-CAM powered image recognition for accurate waste sorting.</p>
+                    </div>
+                </div>
+
+                <!-- IoT Monitoring -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGFzaGJvYXJkfGVufDB8fDB8fHww"
+                            alt="IoT Monitoring"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#22c55e]">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#22c55e] transition-colors">IoT Monitoring
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Real-time sensor data for fill levels, temperature, and humidity.</p>
+                    </div>
+                </div>
+
+                <!-- Metal Detection -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="image-assets/metal-detection.jpeg"
+                            alt="Metal Detection"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#ef4444]">
+                            <i data-lucide="package-search" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#ef4444] transition-colors">Metal
+                            Detection</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Real-time metal detection for efficient waste sorting.</p>
+                    </div>
+                </div>
+
+                <!-- Robotic Arm -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9ib3RpYyUyMGFybXxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Robotic Arm"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#a855f7]">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#a855f7] transition-colors">Robotic Arm</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Automated segregation of waste into designated bins.</p>
+                    </div>
+                </div>
+
+                <!-- Autonomous Bot -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1757488861777-9ba8175a64d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXV0b21vdXMlMjBib3R8ZW58MHx8MHx8fDA%3D"
+                            alt="GPS Tracking"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#f59e0b]">
+                            <i data-lucide="car-front" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#f59e0b] transition-colors">Autonomous Bot
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Autonomous operation for efficient waste collection and management.</p>
+                    </div>
+                </div>
+
+                <!-- AI Automation -->
+                <div class="about-card group">
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWklMjBhdXRvbWF0aW9ufGVufDB8fDB8fHww"
+                            alt="GPS Tracking"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-[#1e293b]/20 to-transparent">
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-10 flex-grow">
+                        <div
+                            class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:scale-110 transition-all duration-300 text-[#69f542]">
+                            <i data-lucide="brain" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-[#69f542] transition-colors">AI Automation
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                            Full AI automation for waste management.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section id="technology" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000"
+                alt="Cyber Background" class="w-full h-full object-cover opacity-5">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-transparent to-[#0f172a]"></div>
+        </div>
+
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#22c55e]/5 blur-[150px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-center text-white mb-20">System Architecture</h2>
+
+            <div class="relative">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
+                    <!-- Sensors -->
+                    <div class="flex flex-col items-center relative z-10 w-full lg:w-auto group">
+                        <div
+                            class="w-24 h-24 rounded-3xl bg-[#1e293b] border border-white/10 flex items-center justify-center text-[#22c55e] mb-6 shadow-lg shadow-[#22c55e]/10 group-hover:scale-110 group-hover:border-[#22c55e]/50 transition-all duration-300">
+                            <i data-lucide="radio" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-white font-black text-lg mb-2 tracking-tight">Sensors</h4>
+                        <p class="text-gray-400 text-sm text-center max-w-[150px] font-medium">Ultrasonic, Gas, DHT11
+                        </p>
+                    </div>
+
+                    <!-- ESP32-CAM -->
+                    <div class="flex flex-col items-center relative z-10 w-full lg:w-auto group">
+                        <div
+                            class="w-24 h-24 rounded-3xl bg-[#1e293b] border border-white/10 flex items-center justify-center text-[#22c55e] mb-6 shadow-lg shadow-[#22c55e]/10 group-hover:scale-110 group-hover:border-[#22c55e]/50 transition-all duration-300">
+                            <i data-lucide="cpu" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-white font-black text-lg mb-2 tracking-tight">ESP32-CAM</h4>
+                        <p class="text-gray-400 text-sm text-center max-w-[150px] font-medium">AI Image Processing</p>
+                    </div>
+
+                    <!-- IoT Gateway -->
+                    <div class="flex flex-col items-center relative z-10 w-full lg:w-auto group">
+                        <div
+                            class="w-24 h-24 rounded-3xl bg-[#1e293b] border border-white/10 flex items-center justify-center text-[#22c55e] mb-6 shadow-lg shadow-[#22c55e]/10 group-hover:scale-110 group-hover:border-[#22c55e]/50 transition-all duration-300">
+                            <i data-lucide="smartphone" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-white font-black text-lg mb-2 tracking-tight">IoT Gateway</h4>
+                        <p class="text-gray-400 text-sm text-center max-w-[150px] font-medium">Data Transmission</p>
+                    </div>
+
+                    <!-- Google Cloud -->
+                    <div class="flex flex-col items-center relative z-10 w-full lg:w-auto group">
+                        <div
+                            class="w-24 h-24 rounded-3xl bg-[#1e293b] border border-white/10 flex items-center justify-center text-[#22c55e] mb-6 shadow-lg shadow-[#22c55e]/10 group-hover:scale-110 group-hover:border-[#22c55e]/50 transition-all duration-300">
+                            <i data-lucide="cloud" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-white font-black text-lg mb-2 tracking-tight">Google Cloud</h4>
+                        <p class="text-gray-400 text-sm text-center max-w-[150px] font-medium">Apps Script API</p>
+                    </div>
+
+                    <!-- Dashboard -->
+                    <div class="flex flex-col items-center relative z-10 w-full lg:w-auto group">
+                        <div
+                            class="w-24 h-24 rounded-3xl bg-[#1e293b] border border-white/10 flex items-center justify-center text-[#22c55e] mb-6 shadow-lg shadow-[#22c55e]/10 group-hover:scale-110 group-hover:border-[#22c55e]/50 transition-all duration-300">
+                            <i data-lucide="monitor" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-white font-black text-lg mb-2 tracking-tight">Dashboard</h4>
+                        <p class="text-gray-400 text-sm text-center max-w-[150px] font-medium">Web Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=2000"
+                alt="City Background" class="w-full h-full object-cover opacity-5">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-transparent to-[#0f172a]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-16">Applications</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <a href="pages/how-it-works.html?context=Smart%20Cities" class="app-card">
+                    <div
+                        class="w-12 h-12 bg-[#22c55e]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#22c55e]">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-sm text-gray-300 group-hover:text-white">Smart Cities</span>
+                </a>
+                <a href="pages/how-it-works.html?context=Industries" class="app-card">
+                    <div
+                        class="w-12 h-12 bg-[#22c55e]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#22c55e]">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-sm text-gray-300 group-hover:text-white">Industries</span>
+                </a>
+                <a href="pages/how-it-works.html?context=Hospitals" class="app-card">
+                    <div
+                        class="w-12 h-12 bg-[#22c55e]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#22c55e]">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-sm text-gray-300 group-hover:text-white">Hospitals</span>
+                </a>
+                <a href="pages/how-it-works.html?context=Rural%20Areas" class="app-card">
+                    <div
+                        class="w-12 h-12 bg-[#22c55e]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#22c55e]">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-sm text-gray-300 group-hover:text-white">Rural Areas</span>
+                </a>
+                <a href="pages/how-it-works.html?context=Campuses" class="app-card">
+                    <div
+                        class="w-12 h-12 bg-[#22c55e]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#22c55e]">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-sm text-gray-300 group-hover:text-white">Campuses</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-[#1e293b]/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Project Team</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="team-member">
+                    <div
+                        class="w-28 h-28 bg-[#1e293b] rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-white/10 group-hover:border-[#22c55e] transition-all duration-500 overflow-hidden shadow-2xl">
+                        <img src="assets/lead.jpeg" alt="Anubhab Kundu"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-black text-xl mb-1 tracking-tight">Anubhab Kundu</h4>
+                    <p class="text-[#22c55e] text-sm font-bold uppercase tracking-widest">Project Lead</p>
+                </div>
+                <div class="team-member">
+                    <div
+                        class="w-28 h-28 bg-[#1e293b] rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-white/10 group-hover:border-[#22c55e] transition-all duration-500 overflow-hidden shadow-2xl">
+                        <img src="assets/web.jpeg" alt="Sumit Pal"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-black text-xl mb-1 tracking-tight">Sumit Pal</h4>
+                    <p class="text-[#22c55e] text-sm font-bold uppercase tracking-widest">IoT & Hardware Engineer</p>
+                </div>
+                <div class="team-member">
+                    <div
+                        class="w-28 h-28 bg-[#1e293b] rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-white/10 group-hover:border-[#22c55e] transition-all duration-500 overflow-hidden shadow-2xl">
+                        <img src="assets/ml.jpeg" alt="Arijita Paria"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-black text-xl mb-1 tracking-tight">Arijita Paria</h4>
+                    <p class="text-[#22c55e] text-sm font-bold uppercase tracking-widest">Web Developer</p>
+                </div>
+                <div class="team-member">
+                    <div
+                        class="w-28 h-28 bg-[#1e293b] rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-white/10 group-hover:border-[#22c55e] transition-all duration-500 overflow-hidden shadow-2xl">
+                        <img src="assets/iot.jpeg" alt="Supriyo Paramanik"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-black text-xl mb-1 tracking-tight">Supriyo Paramanik</h4>
+                    <p class="text-[#22c55e] text-sm font-bold uppercase tracking-widest">ML Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5 text-center">
+        <p class="text-gray-500 text-sm font-medium">© 2026 WAYMAKERS Smart Waste Management System. All rights
+            reserved.</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

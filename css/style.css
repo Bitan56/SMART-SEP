@@ -1,0 +1,258 @@
+/* Custom styles for WAYMAKERS Dashboard */
+
+:root {
+    --primary: #22c55e;
+    --secondary: #3b82f6;
+    --accent: #f59e0b;
+    --danger: #ef4444;
+    --bg: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.5);
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-zoom {
+    animation: zoom 0.8s ease-in-out forwards infinite alternate;
+}
+
+.alert-item {
+    animation: slideIn 0.4s ease-out forwards;
+}
+
+/* Sensor Cards */
+.sensor-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sensor-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.sensor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent);
+    pointer-events: none;
+}
+
+/* About Cards */
+.about-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    rounded: 1.875rem;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(34, 197, 94, 0.5);
+    box-shadow: 0 20px 40px -15px rgba(34, 197, 94, 0.2);
+}
+
+.about-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.05));
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.about-card:hover::after {
+    opacity: 1;
+}
+
+/* App Cards */
+.app-card {
+    display: block;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+    cursor: pointer;
+    group: true;
+}
+
+.app-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(34, 197, 94, 0.05);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Team Member Cards */
+.team-member {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    group: true;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.05));
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.team-member:hover::before {
+    opacity: 1;
+}
+
+/* Leaflet dark mode adjustment */
+.leaflet-container {
+    background: #0f172a !important;
+}
+
+.map-tiles {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.leaflet-popup-content-wrapper {
+    background: #1e293b !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px !important;
+    padding: 0.5rem;
+}
+
+.leaflet-popup-tip {
+    background: #1e293b !important;
+}
+
+.leaflet-control-zoom a {
+    background-color: #1e293b !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: #334155 !important;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chart customization */
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Vehicle image clip path */
+.vehicle-img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}

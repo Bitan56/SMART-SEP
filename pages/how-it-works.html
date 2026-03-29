@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | WAYMAKERS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#0f172a] text-white font-['Inter'] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <div id="logo-placeholder-how-it-works" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center overflow-hidden">
+                        <!-- Add your logo here -->
+                         <img src="../image-assets/project-logo.jpeg" alt="" class="w-full h-full">
+                    </div>
+                    <span class="text-xl font-bold text-[#22c55e]">SMART-SEP</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="how-it-works.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                        <span>How it Works</span>
+                    </a>
+                    <a href="dashboard.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="../index.html#team" class="text-gray-300 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <span>Team</span>
+                    </a>
+                </div>
+
+                <a href="dashboard.html" class="bg-[#22c55e] hover:bg-[#16a34a] text-white px-6 py-2.5 rounded-xl font-bold transition-all duration-300 shadow-lg shadow-[#22c55e]/20">
+                    Live Monitor
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="min-h-screen bg-[#0f172a] text-white pt-24 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000" alt="Tech Background" class="w-full h-full object-cover opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-transparent to-[#0f172a]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Header -->
+            <div class="text-center mb-20">
+                <h1 class="text-5xl font-black tracking-tight mb-4">HOW IT WORKS</h1>
+                <div class="flex items-center justify-center gap-2 text-[#22c55e] font-bold uppercase tracking-widest text-sm">
+                    <span class="w-8 h-px bg-[#22c55e]"></span>
+                    <span id="context-name">General</span> Implementation
+                    <span class="w-8 h-px bg-[#22c55e]"></span>
+                </div>
+            </div>
+
+            <!-- Context Specific Highlight -->
+            <div id="context-highlight" class="bg-[#1e293b] border border-white/10 p-8 rounded-3xl mb-20 flex flex-col md:flex-row items-center gap-8">
+                <div class="w-20 h-20 bg-[#22c55e]/10 rounded-2xl flex items-center justify-center text-[#22c55e] shrink-0">
+                    <i data-lucide="building-2" class="w-10 h-10"></i>
+                </div>
+                <div>
+                    <h2 id="context-title" class="text-2xl font-bold mb-2">Urban Integration</h2>
+                    <p id="context-benefit" class="text-gray-400">Reduces collection costs by 40% through optimized routing based on real-time bin capacity data.</p>
+                </div>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <!-- Detection -->
+                <div class="bg-[#1e293b]/50 border border-white/5 rounded-3xl overflow-hidden flex flex-col group hover:border-white/20 transition-all">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D" alt="Detection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="search" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">1. Detection</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Ultrasonic sensors detect the arrival of waste at the bin entrance, triggering the system to wake up from standby mode.</p>
+                    </div>
+                </div>
+
+                <!-- AI Classification -->
+                <div class="bg-[#1e293b]/50 border border-white/5 rounded-3xl overflow-hidden flex flex-col group hover:border-white/20 transition-all">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Classification" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="cpu" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">2. AI Classification</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">The ESP32-CAM captures an image. Our neural network classifies the waste as Biodegradable or Non-Biodegradable in milliseconds.</p>
+                    </div>
+                </div>
+
+                <!-- Smart Segregation -->
+                <div class="bg-[#1e293b]/50 border border-white/5 rounded-3xl overflow-hidden flex flex-col group hover:border-white/20 transition-all">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1681488503746-0e2cfffb5b36?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c21hcnQlMjBnYXJiYWdlJTIwc2VncmVnYXRpb258ZW58MHx8MHx8fDA%3D" alt="Smart Segregation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="bot" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">3. Smart Segregation</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">The high-torque robotic arm receives the classification signal and physically moves the waste into the correct designated bin.</p>
+                    </div>
+                </div>
+
+                <!-- Cloud Sync -->
+                <div class="bg-[#1e293b]/50 border border-white/5 rounded-3xl overflow-hidden flex flex-col group hover:border-white/20 transition-all">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1677093905912-a653c6301260?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xvdWQlMjBzeW5jfGVufDB8fDB8fHww" alt="Cloud Sync" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="cloud" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">4. Cloud Sync</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Fill levels, gas concentrations, and system health are uploaded to our real-time cloud database for remote monitoring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center bg-gradient-to-r from-[#22c55e]/10 to-[#3b82f6]/10 p-12 rounded-3xl border border-white/5">
+                <h2 class="text-3xl font-bold mb-6">Ready to see it in action?</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="dashboard.html" class="px-8 py-4 bg-[#22c55e] text-white rounded-xl font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                        Go to Live Dashboard
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="../index.html" class="px-8 py-4 border border-white/10 text-white rounded-xl font-bold hover:bg-white/5 transition-colors">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5 text-center">
+        <p class="text-gray-500 text-sm font-medium">© 2026 WAYMAKERS Smart Waste Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/how-it-works.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
