@@ -193,9 +193,9 @@ function updateDashboard(latest) {
             healthIconContainer.className = 'w-10 h-10 bg-[#22c55e]/10 rounded-xl flex items-center justify-center text-[#22c55e]';
         } else {
             // not optimal
-            healthText.innerText = 'OPTIMAL';
-            healthText.className = 'text-[#22c55e] font-bold';
-            healthIconContainer.className = 'w-10 h-10 bg-[#ef4444]/10 rounded-xl flex items-center justify-center text-[#22c55e]';
+            healthText.innerText = 'NOT OPTIMAL';
+            healthText.className = 'text-[#ef4444] font-bold';
+            healthIconContainer.className = 'w-10 h-10 bg-[#ef4444]/10 rounded-xl flex items-center justify-center text-[#ef4444]';
         }
     }
 
