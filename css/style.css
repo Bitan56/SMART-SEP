@@ -161,6 +161,7 @@ body {
     padding: 2rem;
     border-radius: 2rem;
     text-align: center;
+    flex-shrink: 0;
     group: true;
     position: relative;
     overflow: hidden;
@@ -266,6 +267,8 @@ html {
 /* Vehicle image clip path */
 .vehicle-img {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    animation: pulse infinite alternate;
+    animation-duration: 2s;
 }
 
 /* Animation of team member cards */

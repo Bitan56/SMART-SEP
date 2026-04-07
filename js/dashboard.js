@@ -42,7 +42,7 @@ function initMap() {
     });
 
     marker = L.marker([defaultLat, defaultLng], { icon: customIcon }).addTo(map);
-    marker.bindPopup("<b style='color:#22c55e'>WAYMAKERS VEHICLE</b><br>Status: Active").openPopup();
+    marker.bindPopup("<b style='color:#22c55e'>SMART-SEP VEHICLE</b><br>Status: Active").openPopup();
 }
 
 // Initialize Chart.js
