@@ -54,6 +54,7 @@ body {
     to {
         transform: scale(1.1);
         border: 1px solid green;
+        box-shadow: 1px 0px 40px 0px green;
     }
 }
 
