@@ -47,6 +47,16 @@ body {
     }
 }
 
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+        border: 1px solid green;
+    }
+}
+
 .animate-fadeIn {
     animation: fadeIn 0.8s ease-out forwards;
 }
@@ -255,4 +265,36 @@ html {
 /* Vehicle image clip path */
 .vehicle-img {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/* Animation of team member cards */
+
+#supriyo{
+    animation: pulse infinite alternate;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+#sovangi{
+    animation: pulse infinite alternate;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+#anubhab{
+    animation: pulse infinite alternate;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+#bitan{
+    animation: pulse infinite alternate;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+}
+
+#manab {
+    animation: pulse infinite alternate;
+    animation-duration: 3s;
+    animation-delay: 2s;
 }
